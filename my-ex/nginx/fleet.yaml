@@ -39,7 +39,7 @@ targetCustomizations:
   - name: aws
     helm:
       values:
-        clusterSelect: nginx-configmap-azure
+        clusterSelect: nginx-configmap-aws
         replication: false
     clusterSelector:
       matchLabels:
@@ -47,7 +47,7 @@ targetCustomizations:
   - name: az
     helm:
       values:
-        clusterSelect: nginx-configmap-aws
+        clusterSelect: nginx-configmap-azure
         replication: false
     clusterSelector:
       matchLabels:
