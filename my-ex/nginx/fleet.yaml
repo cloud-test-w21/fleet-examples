@@ -25,6 +25,14 @@ helm:
   # Override immutable resources. This could be dangerous.
   force: false
 targetCustomizations:
+  - name: catchall
+    helm:
+      values:
+        clusterSelect: nginx-configmap-quickstart
+        replicaCount: 4
+    clusterSelector:
+      matchLabels:
+        {}      
   - name: aws
     helm:
       values:
@@ -41,11 +49,4 @@ targetCustomizations:
     clusterSelector:
       matchLabels:
         cloud: azure        
-  - name: catchall
-    helm:
-      values:
-        clusterSelect: nginx-configmap-quickstart
-        replicaCount: 4
-    clusterSelector:
-      matchLabels:
-        {}      
+
