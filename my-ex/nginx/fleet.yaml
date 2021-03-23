@@ -40,7 +40,7 @@ targetCustomizations:
     helm:
       values:
         clusterSelect: nginx-configmap-aws
-        replication: false
+        replicas: 0
     clusterSelector:
       matchLabels:
         cloud: aws
@@ -48,7 +48,7 @@ targetCustomizations:
     helm:
       values:
         clusterSelect: nginx-configmap-azure
-        replication: false
+        replicas: 2
     clusterSelector:
       matchLabels:
         cloud: azure        
@@ -56,7 +56,7 @@ targetCustomizations:
     helm:
       values:
         clusterSelect: nginx-configmap-quickstart
-        replication: false
+        replicas: 0
     clusterSelector:
       matchLabels:
         {}      
