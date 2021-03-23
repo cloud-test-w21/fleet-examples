@@ -24,6 +24,8 @@ helm:
     name: nginx
   # Override immutable resources. This could be dangerous.
   force: false
+
+# Order matters for Target Customizations
 targetCustomizations:
   - name: catchall
     helm:
