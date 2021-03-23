@@ -20,7 +20,7 @@ helm:
   # install.
   timeoutSeconds: 0
   values:
-    cluster_select: nginx-configmap-quickstart
+    clusterSelect: nginx-configmap-quickstart
     replicas: 1
     name: nginx
   # Override immutable resources. This could be dangerous.
@@ -30,7 +30,7 @@ targetCustomizations:
 - name: quickstart
   helm:
     values:
-      cluster_select: nginx-configmap-aws
+      clusterSelect: nginx-configmap-aws
       replication: false
   clusterSelector:
     matchLabels:
