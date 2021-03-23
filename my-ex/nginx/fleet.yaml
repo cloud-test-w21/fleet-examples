@@ -29,7 +29,7 @@ targetCustomizations:
 - name: quickstart
   helm:
     values:
-      cluster_select: nginx-configmap-aws
+      cluster_select: nginx-configmap-quickstart
       replication: false
   clusterSelector:
     matchLabels:
