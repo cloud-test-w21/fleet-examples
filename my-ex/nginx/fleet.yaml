@@ -52,3 +52,11 @@ targetCustomizations:
     clusterSelector:
       matchLabels:
         cloud: azure        
+  - name: catchall
+    helm:
+      values:
+        clusterSelect: nginx-configmap-quickstart
+        replication: false
+    clusterSelector:
+      matchLabels:
+        {}      
