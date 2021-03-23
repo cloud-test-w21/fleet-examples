@@ -55,7 +55,6 @@ spec:
           configMap:
             name: "{{.Values.clusterSelect}}"
               # name: "nginx-configmap-quickstart"
-            
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
