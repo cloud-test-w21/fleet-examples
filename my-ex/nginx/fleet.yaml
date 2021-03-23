@@ -55,20 +55,3 @@ targetCustomizations:
     clusterSelector:
       matchLabels:
         cloud: azure        
-
-# - name: aws
-#   helm:
-#     values:
-#       cluster_select: nginx-configmap-aws      
-#       replication: false
-#   clusterSelector:
-#     matchLabels:
-#       env: aws-cluster-group
-
-# - name: azure
-#   helm:
-#     values:
-#       replicas: 3
-#   clusterSelector:
-#     matchLabels:
-#       env: azure-cluster-group
