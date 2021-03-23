@@ -53,8 +53,9 @@ spec:
       volumes:
         - name: nginx
           configMap:
-              name: "nginx-configmap-quickstart"
-            # name: "{{ .Values.clusterSelect }}"
+            name: "{{- include .Values.clusterSelect .}}"
+              # name: "nginx-configmap-quickstart"
+            
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
