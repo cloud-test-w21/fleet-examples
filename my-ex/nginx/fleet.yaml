@@ -24,28 +24,28 @@ helm:
   # Override immutable resources. This could be dangerous.
   force: false
 
-# targetCustomizations:
-# - name: dev
-#   helm:
-#     values:
-#       replication: false
-#   clusterSelector:
-#     matchLabels:
-#       env: dev
+targetCustomizations:
+- name: quickstart
+  helm:
+    values:
+      cluster_select: nginx-configmap-aws
+      replication: false
+  clusterSelector:
+    matchLabels:
+      env: quickstart
 
-# - name: test
-#   helm:
-#     values:
-#       replicas: 3
-#   clusterSelector:
-#     matchLabels:
-#       env: test
+- name: aws
+  helm:
+    values:
+      replicas: 3
+  clusterSelector:
+    matchLabels:
+      env: aws-cluster-group
 
-# - name: prod
-#   helm:
-#     values:
-#       serviceType: LoadBalancer
-#       replicas: 3
-#   clusterSelector:
-#     matchLabels:
-#       env: prod
+- name: azure
+  helm:
+    values:
+      replicas: 3
+  clusterSelector:
+    matchLabels:
+      env: azure-cluster-group

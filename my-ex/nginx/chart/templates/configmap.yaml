@@ -1,7 +1,35 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ nginx.fullname }}-configmap
+  name: nginx-configmap-quickstart
 data:
   index.html: |
     <h1>{{ .Values.welcomePage }}</h1>
+  aws.html: |
+    <h1>{{ .Values.welcomePageAWS }}</h1>
+  azure.html: |
+    <h1>{{ .Values.welcomePageAZ }}</h1>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configmap-quickstart
+data:
+  index.html: |
+    <h1>{{ .Values.welcomePage }}</h1>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configmap-aws
+data:
+  index.html: |
+    <h1>{{ .Values.welcomePageAWS }}</h1>
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configmap-azure
+data:
+  index.html: |
+    <h1>{{ .Values.welcomePageAZ }}</h1>

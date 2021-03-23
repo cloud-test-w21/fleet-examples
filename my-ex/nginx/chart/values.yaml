@@ -4,7 +4,9 @@
 
 replicaCount: 1
 
-welcomePage: "Welcome"
+welcomePage: "Welcome to default"
+welcomePageAWS: "Welcome to AWS"
+welcomePageAZ: "Welcome to AZ"
 
 image:
   repository: nginx
