@@ -34,7 +34,7 @@ targetCustomizations:
         replication: false
     clusterSelector:
       matchLabels:
-        environment: ex-cluster-group
+        environment: quickstart
 
 # - name: aws
 #   helm:
