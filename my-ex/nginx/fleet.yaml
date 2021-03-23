@@ -29,7 +29,7 @@ targetCustomizations:
     helm:
       values:
         clusterSelect: nginx-configmap-quickstart
-        replicaCount: 4
+        replicaCount: 3
     clusterSelector:
       matchLabels: []
   - name: aws
