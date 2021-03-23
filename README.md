@@ -1,3 +1,9 @@
+# my-ex/nginx
+Contains a simple nginx helm chart that is managed by Fleet.
+
+Fleet `targetCustomizations` enforces precedence.
+
+
 # Fleet Examples
 
 This repository contains examples of how to use Fleet using different approaches.
