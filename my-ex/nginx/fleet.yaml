@@ -36,6 +36,26 @@ targetCustomizations:
       matchLabels:
         environment: quickstart
 
+targetCustomizations:
+  - name: aws
+    helm:
+      values:
+        clusterSelect: nginx-configmap-aws
+        replication: false
+    clusterSelector:
+      matchLabels:
+        cloud: aws
+
+targetCustomizations:
+  - name: az
+    helm:
+      values:
+        clusterSelect: nginx-configmap-azure
+        replication: false
+    clusterSelector:
+      matchLabels:
+        cloud: azure        
+
 # - name: aws
 #   helm:
 #     values:
