@@ -21,6 +21,7 @@ helm:
   values:
     any-custom: value
     replicas: 1
+    name: nginx
   # Override immutable resources. This could be dangerous.
   force: false
 
