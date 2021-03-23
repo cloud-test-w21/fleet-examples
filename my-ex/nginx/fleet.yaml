@@ -15,11 +15,12 @@ helm:
   releaseName: my-nginx
   # The version of the chart or semver constraint of the chart to find. If a constraint
   # is specified it is evaluated each time git changes.
-  version: 0.1.0
+  version: 0.1.1
   # Any values that should be placed in the `values.yaml` and passed to helm during
   # install.
+  timeoutSeconds: 0
   values:
-    any-custom: value
+    cluster_select: nginx-configmap-quickstart
     replicas: 1
     name: nginx
   # Override immutable resources. This could be dangerous.
@@ -38,7 +39,8 @@ targetCustomizations:
 # - name: aws
 #   helm:
 #     values:
-#       replicas: 3
+#       cluster_select: nginx-configmap-aws      
+#       replication: false
 #   clusterSelector:
 #     matchLabels:
 #       env: aws-cluster-group
