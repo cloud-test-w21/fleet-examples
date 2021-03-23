@@ -53,7 +53,7 @@ spec:
       volumes:
         - name: nginx
           configMap:
-            name: "{{- include .Values.clusterSelect .}}"
+            name: "{{.Values.clusterSelect}}"
               # name: "nginx-configmap-quickstart"
             
       {{- with .Values.nodeSelector }}
